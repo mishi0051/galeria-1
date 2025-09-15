@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Galeria de Imagenes</title>
+<style>
+        #galeria{
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+			border: 2px solid black;
+			margin: auto;
+			text-align: center;
+		}
+
+		#contenedor{
+			width: 2020px;
+			height: 300px;
+			display: flex;
+			transition: all 0.5s ease;
+		}
+
+		.imagen{
+			width: 400px;
+			height: 300px;
+		}
+
+		.btn-siguiente, .btn-anterior{
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			margin: 10px;
+		}
+
+		.titulo{
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		body{
+			background-color: #5c0202;
+			font-family: Arial, sans-serif;
+		}
+</style>
+<body>
+
+
+
+
+
+<h1>Galería de Imágenes</h1>
+<p class="titulo"></p>
+<div id="galeria">
+	<div id="contenedor">
+		<img src="img1.jpg" class="imagen 1" name="img1">
+		<img src="img2.jpg" class="imagen 2" name="img2">
+		<img src="img3.jpg" class="imagen 3" name="img3">
+		<img src="img4.jpg" class="imagen 4" name="img4">
+		<img src="img5.jpg" class="imagen 5" name="img5">
+	</div>
+	<br><br>
+	<button class="btn-siguiente">Siguiente</button>
+	<button class="btn-anterior">Anterior</button>
+
+
+
+</head>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
