@@ -1,36 +1,22 @@
-const titulo = document.querySelector('.titulo');
-const btnSiguiente = document.querySelector('.btn-siguiente');
-const btnAnterior = document.querySelector('.btn-anterior');
-const contenedor = document.querySelector('#contenedor');
-let i = 1;
+const honguito = document.querySelectorAll('.honguito');
+const contadorDeMonedas = document.querySelector('.contador-de-monedas');
+const personaje = document.querySelector('.personaje');
+const rectangulo = document.querySelector('.rectangulo');
+let contador = 0;
 
+let monedas = 0;
+let posX = 7;  
+let posY = 320;
 
-function siguiente() {
-    console.log(i);
-    if (i === 6) {
-        i = 0;
-    }
+honguito.forEach( honguito => {
+   
+    honguito.addEventListener('click', () => {
+         honguito.style.filter = "grayscale(1)";
+         honguito.classList.add('saltar');
+});
 
-    contenedor.style.marginLeft = `-${400 * i}px`
-    contenedor.style.transitionDuration = '0.5s';
-    i++;
-}
+})
 
-function anterior() {
-    console.log(i);
-    if (i === 1) i = 5;
-    i--;
-    titulo.textContent = titulo[i];
-    contenedor.style.marginLeft = `-${400 * i}px`
-    contenedor.style.transform = `translateX(${400}px)`;
-    i;
-
-
-}
-
-btnAnterior.addEventListener('click', anterior);
-btnSiguiente.addEventListener('click', siguiente);
-
-
-
-
+/* personaje.forEach( personaje => {
+    personaje.style.filter = "grayscale(1)";
+ */
